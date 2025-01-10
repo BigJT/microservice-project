@@ -7,13 +7,18 @@ terraform {
   }
 
   provider "aws" {
-  region = var.region
+    region = var.region
 
-  default_tags {
-    tags = {
-      owner = "pafable"
+    default_tags {
+      tags = {
+        owner = "bigjt"
+      }
     }
   }
+
 }
 
+variable "region" {
+  description = "aws region"
+  default     = "eu-west-2"
 }
